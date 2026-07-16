@@ -1,0 +1,111 @@
+==========================================================
+                 C LEXICAL ANALYZER
+==========================================================
+
+[INFO] Opening input file...
+[INFO] Reading source code...
+[INFO] Lexical Analysis Started...
+
+----------------------------------------------------------
+Line            Lexeme                         Token Type          
+----------------------------------------------------------
+input.c: 1: 1: Preprocessor    #include <stdio.h>
+input.c: 3: 1: Preprocessor    #define SIZE 10
+input.c: 5: 1: Keyword         int
+input.c: 5: 2: Identifier      main
+input.c: 5: 2: Delimiter       (
+input.c: 5: 2: Delimiter       )
+input.c: 6: 1: Delimiter       {
+input.c: 7: 5: Keyword         int
+input.c: 7: 6: Identifier      a
+input.c: 7: 7: Operator        =
+input.c: 7: 8: Integer         10
+input.c: 7: 8: Delimiter       ;
+input.c: 8: 5: Keyword         float
+input.c: 8: 6: Identifier      b
+input.c: 8: 7: Operator        =
+input.c: 8: 8: Float           12.34
+input.c: 8: 8: Delimiter       ;
+input.c: 9: 5: Keyword         char
+input.c: 9: 6: Identifier      ch
+input.c: 9: 7: Operator        =
+input.c: 9: 8: Character       'A'
+input.c: 9: 8: Delimiter       ;
+input.c:10: 5: Keyword         char
+input.c:10: 6: Identifier      nl
+input.c:10: 7: Operator        =
+input.c:10: 8: Character       '\n'
+input.c:10: 8: Delimiter       ;
+input.c:11: 5: Keyword         char
+input.c:11: 6: Operator        *
+input.c:11: 6: Identifier      msg
+input.c:11: 7: Operator        =
+input.c:11: 8: String          "Hello World"
+input.c:11: 8: Delimiter       ;
+input.c:14: 9: Identifier      a
+input.c:14: 9: Operator        ++
+input.c:14: 9: Delimiter       ;
+input.c:15: 5: Identifier      b
+input.c:15: 5: Operator        --
+input.c:15: 5: Delimiter       ;
+input.c:16: 5: Identifier      a
+input.c:16: 6: Operator        +=
+input.c:16: 7: Integer         5
+input.c:16: 7: Delimiter       ;
+input.c:17: 5: Identifier      a
+input.c:17: 6: Operator        ==
+input.c:17: 7: Integer         10
+input.c:17: 7: Delimiter       ;
+input.c:20: 9: Keyword         float
+input.c:20:10: Identifier      x
+input.c:20:11: Operator        =
+input.c:20:12: Unknown         12.34.56
+input.c:20:12: Delimiter       ;
+input.c:23: 9: Keyword         char
+input.c:23:10: Operator        *
+input.c:23:10: Identifier      str
+input.c:23:11: Operator        =
+input.c:23:12: ERROR: Unterminated String "Hello World;
+input.c:25: 9: Keyword         char
+input.c:25:10: Identifier      c
+input.c:25:11: Operator        =
+input.c:25:12: ERROR: Unterminated Character 'X;
+input.c:27: 9: Keyword         int
+input.c:27:10: Identifier      p
+input.c:27:11: Operator        =
+input.c:27:12: Integer         10
+input.c:27:13: Unknown         @
+input.c:27:14: Integer         20
+input.c:27:14: Delimiter       ;
+input.c:28: 5: Keyword         int
+input.c:28: 6: Identifier      q
+input.c:28: 7: Operator        =
+input.c:28: 8: Integer         30
+input.c:28: 9: Unknown         $
+input.c:28:10: Integer         40
+input.c:28:10: Delimiter       ;
+input.c:29: 5: Keyword         int
+input.c:29: 6: Identifier      r
+input.c:29: 7: Operator        =
+input.c:29: 8: Integer         50
+input.c:29: 9: Unknown         `
+input.c:29:10: Integer         60
+input.c:29:10: Delimiter       ;
+input.c:37: 1: Delimiter       }
+
+========================================
+          TOKEN SUMMARY
+========================================
+       Preprocessors : 2
+       Keywords      : 12
+       Identifiers   : 16
+       Operators     : 17
+       Delimiters    : 17
+       Integers      : 9
+       Floats        : 1
+       Strings       : 1
+       Characters    : 2
+       Unknown       : 6
+----------------------------------------
+       Total Tokens  : 83
+========================================
