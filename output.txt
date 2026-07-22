@@ -1,0 +1,48 @@
+==========================================================
+                 C LEXICAL ANALYZER
+==========================================================
+
+[INFO] Opening input file...
+[INFO] Reading source code...
+[INFO] Lexical Analysis Started...
+
+----------------------------------------------------------
+Line            Lexeme                         Token Type          
+----------------------------------------------------------
+input.c: 1: 1: Preprocessor    #include <stdio.h>
+input.c: 2: 1: Preprocessor    #define MAX 10
+input.c: 4: 1: Keyword         int
+input.c: 4: 2: Identifier      main
+input.c: 4: 2: Delimiter       (
+input.c: 4: 2: Delimiter       )
+input.c: 4: 2: Delimiter       {
+input.c: 5: 5: Identifier      b
+input.c: 5: 5: ERROR: Variable Not Declared b
+input.c: 5: 5: Delimiter       ;
+input.c: 6: 5: Keyword         int
+input.c: 6: 6: Identifier      a
+input.c: 6: 7: Operator        =
+input.c: 6: 8: Integer         123
+input.c: 6: 8: Delimiter       ;
+input.c: 7: 5: Identifier      string
+input.c: 7: 5: ERROR: Variable Not Declared string
+input.c: 7: 6: Operator        =
+input.c: 7: 7: ERROR: Unterminated String "abc;
+input.c: 7: 7: Delimiter       }
+
+========================================
+          TOKEN SUMMARY
+========================================
+       Preprocessors : 2
+       Keywords      : 2
+       Identifiers   : 4
+       Operators     : 2
+       Delimiters    : 6
+       Integers      : 1
+       Floats        : 0
+       Strings       : 0
+       Characters    : 0
+       Unknown       : 3
+----------------------------------------
+       Total Tokens  : 20
+========================================
